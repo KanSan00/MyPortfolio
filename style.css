@@ -1,0 +1,264 @@
+/* 全体の設定 */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+}
+
+/* 1. スクロールバーによる横揺れを防止 */
+html {
+    scrollbar-gutter: stable;
+    /* スクロールバーの有無に関わらず余白を確保します */
+}
+
+/* 2. メインコンテンツに最小の高さを設定 */
+main {
+    min-height: 500px;
+    /* お好みの高さに調整してください。これにより高さが変わってもレイアウトが安定します */
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
+    color: #e0e0e0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* スキルカード風タブのスタイル */
+.tab-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-tab {
+    flex: 1;
+    /* ★サイズを均等に揃える */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.card-tab.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.tab-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tab-desc {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.card-tab.active .tab-desc {
+    color: #e0f0ff;
+}
+
+/* スキルカード（About Me 内） */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 4px solid var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* コンテンツ表示切り替え */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+    margin-top: 40px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* PDFコンテナ */
+.pdf-container {
+    margin-top: 20px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+}
+
+.pdf-container iframe {
+    border-radius: 8px;
+    display: block;
+}
+
+.pdf-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-link:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+/* リンク付きスキルカード */
+.skill-card-link {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom-color: #27ae60;
+}
+
+.skill-card-link:hover {
+    background: #27ae60;
+    color: #fff;
+    transform: translateY(-5px);
+    border-bottom-color: #1e8449;
+}
+
+/* チーム紹介ページ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border-bottom: 4px solid #27ae60;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.team-card h2 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.team-card-link:hover {
+    background: #27ae60;
+    border-bottom-color: #1e8449;
+}
+
+.team-card-link:hover h2 {
+    color: #fff;
+}
+
+/* 戻るリンク */
+.back-link {
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--accent-color);
+}

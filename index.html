@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Portfolio</h1>
+            <nav class="tab-container">
+                <button class="card-tab active" onclick="openTab('about')">
+                    <span class="tab-title">About Me</span>
+                    <span class="tab-desc">私について</span>
+                </button>
+                <button class="card-tab" onclick="openTab('github')">
+                    <span class="tab-title">GitHub</span>
+                    <span class="tab-desc">公開物</span>
+                </button>
+                <button class="card-tab" onclick="openTab('Career')">
+                    <span class="tab-title">Career</span>
+                    <span class="tab-desc">経歴</span>
+                </button>
+                <button class="card-tab" onclick="openTab('Works')">
+                    <span class="tab-title">Works</span>
+                    <span class="tab-desc">実績</span>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about" class="tab-content active">
+                <h2>About Me</h2>
+                <p>こんにちは！こんばんは！<br>
+                    洗 幹太です。<br>
+                    宇都宮市在住の元ゲームプログラマーです。
+                </p>
+                <h3>主なスキル</h3>
+                <div class="skill-grid">
+                    <div class="skill-card">Unity / C#</div>
+                    <div class="skill-card">Unity / TypeScript</div>
+                    <div class="skill-card">HTML / CSS</div>
+                    <div class="skill-card">JavaScript</div>
+                </div>
+                <h3>趣味</h3>
+                <div class="skill-grid">
+                    <a href="SubHTML/soccer.html" class="skill-card skill-card-link">サッカー観戦</a>
+                    <a href="SubHTML/games.html" class="skill-card skill-card-link">ゲーム</a>
+                    <a href="SubHTML/anime.html" class="skill-card skill-card-link">アニメ鑑賞</a>
+                    <a href="SubHTML/manga.html" class="skill-card skill-card-link">漫画</a>
+                </div>
+            </section>
+
+            <section id="github" class="tab-content">
+                <h2>GitHub</h2>
+                <p>プロフィールページに飛びます</p>
+                <div class="skill-grid">
+                    <a href="https://github.com/Kansan00" target="_blank" class="skill-card skill-card-link">GitHub</a>
+                </div>
+            </section>
+
+            <section id="Career" class="tab-content">
+                <h2>Career</h2>
+                <p>私の経歴です</p>
+                <p>平成 31 / 4月 バンタンゲームアカデミー 入学</p>
+                <p>令和 4 / 3月 バンタンゲームアカデミー 卒業</p>
+                <p>令和 4 / 4月 株式会社フィグザ [エンジニア] 入社</p>
+                <p>令和 7 / 6月 株式会社フィグザ [エンジニア] 退職</p>
+            </section>
+
+            <section id="Works" class="tab-content">
+                <h2>Works</h2>
+                <h3>スキルシート</h3>
+                <p>私の実績です。PDFでご覧いただけます。</p>
+                <div class="pdf-container">
+                    <a href="PDF/SkillSheet.pdf" target="_blank" class="pdf-link">スキルシートを開く</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Kanta Arai</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
