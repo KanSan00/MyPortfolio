@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -29,6 +31,10 @@
                 <button class="card-tab" onclick="openTab('Works')">
                     <span class="tab-title">Works</span>
                     <span class="tab-desc">実績</span>
+                </button>
+                <button class="card-tab" onclick="openTab('Contact')">
+                    <span class="tab-title">Contact</span>
+                    <span class="tab-desc">連絡先</span>
                 </button>
             </nav>
         </header>
@@ -89,7 +95,23 @@
         </footer>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tab-container').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: true,
+                arrows: true,
+            });
+        });
+    </script>
+
 </body>
 
 </html>
