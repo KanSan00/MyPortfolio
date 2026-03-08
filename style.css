@@ -49,19 +49,32 @@ header h1 {
 
 /* スキルカード風タブのスタイル */
 .tab-container {
-    display: flex;
-    gap: 20px;
     width: 100%;
 }
 
+/* !importantとつけることで優先度を最大にする 外部ライブラリのスタイルを上書きする場合は使えるやり方らしい*/
+/* Slickスライドの高さを均一にする */
+.tab-container .slick-track {
+    display: flex !important;
+}
+
+.tab-container .slick-slide {
+    height: auto !important;
+}
+
+.tab-container .slick-slide>div {
+    height: 100%;
+}
+
 .card-tab {
-    flex: 1;
-    /* ★サイズを均等に揃える */
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px 10px;
+    margin: 0 10px;
+    height: 100%;
+    box-sizing: border-box;
     background: var(--card-bg);
     border: 2px solid transparent;
     border-radius: 12px;
@@ -96,6 +109,15 @@ header h1 {
 
 .card-tab.active .tab-desc {
     color: #e0f0ff;
+}
+
+/* ドットの色を変更 */
+.slick-dots li button:before {
+    color: #ffffff !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--accent-color) !important;
 }
 
 /* スキルカード（About Me 内） */
@@ -143,34 +165,6 @@ header h1 {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* モバイル対応：タブを横スクロール可能にする */
-@media (max-width: 768px) {
-    .tab-container {
-        /* 横スクロールを有効にする */
-        overflow-x: auto;
-        /* iOS でスムーズスクロール */
-        -webkit-overflow-scrolling: touch;
-        /* スナップスクロール */
-        scroll-snap-type: x mandatory;
-        /* Firefox: スクロールバー非表示 */
-        scrollbar-width: none;
-    }
-
-    /* Chrome/Safari: スクロールバー非表示 */
-    .tab-container::-webkit-scrollbar {
-        display: none;
-    }
-
-    .card-tab {
-        /* 縮まないようにする（ここが重要） */
-        flex: 0 0 auto;
-        /* タブの最小幅を設定 */
-        min-width: 140px;
-        /* スナップ位置 */
-        scroll-snap-align: start;
     }
 }
 
