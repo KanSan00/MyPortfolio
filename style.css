@@ -7,10 +7,8 @@
     --text-color: #333;
 }
 
-/* 1. スクロールバーによる横揺れを防止 */
 html {
-    scrollbar-gutter: stable;
-    /* スクロールバーの有無に関わらず余白を確保します */
+    scroll-behavior: smooth;
 }
 
 /* 2. メインコンテンツに最小の高さを設定 */
@@ -20,6 +18,7 @@ main {
 }
 
 body {
+    /*グラデーションしているところ*/
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
     color: #e0e0e0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -30,8 +29,9 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 20px;
+    padding-top: 320px;
     display: flex;
     flex-direction: column;
 }
@@ -47,77 +47,50 @@ header h1 {
     margin-bottom: 30px;
 }
 
-/* スキルカード風タブのスタイル */
-.tab-container {
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+#greeting {
+    text-align: center;
+}
+
+#profile-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* プロフィールコンテナ */
+#profile-container {
     width: 100%;
 }
 
-/* !importantとつけることで優先度を最大にする 外部ライブラリのスタイルを上書きする場合は使えるやり方らしい*/
-/* Slickスライドの高さを均一にする */
-.tab-container .slick-track {
-    display: flex !important;
-}
-
-.tab-container .slick-slide {
-    height: auto !important;
-}
-
-.tab-container .slick-slide>div {
-    height: 100%;
-}
-
-.card-tab {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
+#profile-container ul {
+    display: flex;
     justify-content: center;
-    padding: 15px 10px;
-    margin: 0 10px;
-    height: 100%;
-    box-sizing: border-box;
-    background: var(--card-bg);
-    border: 2px solid transparent;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
 }
 
-/*ホバーさせる*/
-.card-tab:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
-}
-
-.card-tab.active {
-    background: var(--accent-color);
-    color: white;
-    border-color: var(--accent-color);
-}
-
-.tab-title {
-    font-size: 1.2rem;
+#profile-container li {
+    font-size: 18px;
     font-weight: bold;
 }
 
-.tab-desc {
-    font-size: 0.8rem;
-    margin-top: 5px;
-    opacity: 0.8;
+#profile-container a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
-.card-tab.active .tab-desc {
-    color: #e0f0ff;
-}
-
-/* ドットの色を変更 */
-.slick-dots li button:before {
-    color: #ffffff !important;
-}
-
-.slick-dots li.slick-active button:before {
-    color: var(--accent-color) !important;
+#profile-container a:hover {
+    color: var(--accent-color);
 }
 
 /* スキルカード（About Me 内） */
@@ -144,30 +117,12 @@ header h1 {
     transform: translateY(-5px);
 }
 
-/* コンテンツ表示切り替え */
-.tab-content {
-    display: none;
-    animation: fadeIn 0.5s;
-    margin-top: 40px;
+/*Career*/
+#career-table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
 }
-
-.tab-content.active {
-    display: block;
-}
-
-/*タブを切り替えたときにフェードイン*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 /* PDFコンテナ */
 .pdf-container {

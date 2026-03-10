@@ -13,36 +13,23 @@
 <body>
 
     <div class="container">
-        <header>
+        <header id="profile-header">
             <h1>My Portfolio</h1>
-            <nav class="tab-container">
-                <button class="card-tab active" onclick="openTab('about')">
-                    <span class="tab-title">About Me</span>
-                    <span class="tab-desc">私について</span>
-                </button>
-                <button class="card-tab" onclick="openTab('github')">
-                    <span class="tab-title">GitHub</span>
-                    <span class="tab-desc">公開物</span>
-                </button>
-                <button class="card-tab" onclick="openTab('Career')">
-                    <span class="tab-title">Career</span>
-                    <span class="tab-desc">経歴</span>
-                </button>
-                <button class="card-tab" onclick="openTab('Works')">
-                    <span class="tab-title">Works</span>
-                    <span class="tab-desc">実績</span>
-                </button>
-                <button class="card-tab" onclick="openTab('Contact')">
-                    <span class="tab-title">Contact</span>
-                    <span class="tab-desc">連絡先</span>
-                </button>
+            <nav id="profile-container">
+                <ul>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#github">GitHub</a></li>
+                    <li><a href="#Career">Career</a></li>
+                    <li><a href="#Works">Works</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
-            <section id="about" class="tab-content active">
+            <section id="about">
                 <h2>About Me</h2>
-                <p>こんにちは！こんばんは！<br>
+                <p id="greeting">こんにちは！こんばんは！<br>
                     洗 幹太です。<br>
                     宇都宮市在住の元ゲームプログラマーです。
                 </p>
@@ -54,6 +41,7 @@
                     <div class="skill-card">JavaScript は<br>学習中</div>
                 </div>
                 <h3>趣味</h3>
+                <p>カードをクリックすると別ページに飛び推しが見れます！</p>
                 <div class="skill-grid">
                     <a href="SubHTML/soccer.html" class="skill-card skill-card-link">サッカー観戦</a>
                     <a href="SubHTML/games.html" class="skill-card skill-card-link">ゲーム</a>
@@ -62,7 +50,7 @@
                 </div>
             </section>
 
-            <section id="github" class="tab-content">
+            <section id="github">
                 <h2>GitHub</h2>
                 <p>プロフィールページに飛びます</p>
                 <div class="skill-grid">
@@ -70,11 +58,12 @@
                 </div>
             </section>
 
-            <section id="Career" class="tab-content">
+            <section id="Career">
                 <h2>Career</h2>
-                <p>私の経歴です</p>
-                <p>実務経験 3年</p>
-                <table border="1">
+                <p>私の経歴です<br>
+                    実務経験 3年
+                </p>
+                <table id="career-table">
                     <tr>
                         <td>平成 31 / 4月</td>
                         <td>バンタンゲームアカデミー東京校</td>
@@ -98,8 +87,9 @@
                 </table>
             </section>
 
-            <section id="Works" class="tab-content">
+            <section id="Works">
                 <h2>Works</h2>
+                <div></div>
                 <h3>スキルシート</h3>
                 <p>私の実績です。PDFでご覧いただけます。</p>
                 <div class="pdf-container">
@@ -107,7 +97,7 @@
                 </div>
             </section>
 
-            <section id="Contact" class="tab-content">
+            <section id="Contact">
                 <h2>Contact</h2>
                 <h3>連絡先</h3>
                 <p>arakan.k.0010@gmail.com</p>
@@ -126,7 +116,7 @@
 
     <script>
         $(document).ready(function () {
-            $('.tab-container').slick({
+            $('.').slick({
                 infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 3,
