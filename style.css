@@ -97,6 +97,26 @@ h2 {
     color: var(--accent-color);
 }
 
+/* モバイル時: Slickスライダー用 */
+@media (max-width: 768px) {
+    #profile-container ul {
+        display: block;
+    }
+
+    #profile-container li {
+        text-align: center;
+    }
+}
+
+/* Slickドットの色 */
+.profile-list .slick-dots li button:before {
+    color: #ffffff !important;
+}
+
+.profile-list .slick-dots li.slick-active button:before {
+    color: var(--accent-color) !important;
+}
+
 /* スキルカード（About Me 内） */
 .skill-grid {
     display: grid;
