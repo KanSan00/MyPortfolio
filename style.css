@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 280px;
 }
 
 /* 2. メインコンテンツに最小の高さを設定 */
@@ -24,14 +25,14 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-    min-height: 100vh;
+    min-height: 100px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 320px;
+    padding-top: 280px;
     display: flex;
     flex-direction: column;
 }
@@ -50,6 +51,9 @@ header h1 {
 h2 {
     color: #ffffff;
     text-align: center;
+    border-bottom: 4px double #ffffff;
+    padding-bottom: 5px;
+    margin-top: 120px;
 }
 
 #greeting {
@@ -118,8 +122,13 @@ h2 {
 }
 
 /*Career*/
+#career-comment {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 #career-table {
-    width: 60%;
+    width: 100%;
     margin: auto;
     border-collapse: collapse;
 }
@@ -156,6 +165,18 @@ h2 {
     background: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
