@@ -220,8 +220,8 @@ footer {
     transition: all 0.3s ease;
 }
 
-.team-card h2 {
-    font-size: 1.3rem;
+.team-card h3 {
+    font-size: 18px;
     color: var(--primary-color);
     margin: 0;
 }
