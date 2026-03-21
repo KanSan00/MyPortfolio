@@ -48,7 +48,7 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: auto;
 }
 
 header h1 {
@@ -71,12 +71,7 @@ h2 {
 }
 
 #profile-header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
 }
 
 /* プロフィールコンテナ */
@@ -90,6 +85,7 @@ h2 {
     gap: 60px;
     list-style: none;
     padding: 0;
+    border-bottom: 1px solid #ffffff;
 }
 
 #profile-container li {
@@ -293,5 +289,20 @@ footer {
 .back-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--accent-color);
+}
+
+#footer_top {
+    text-align: center;
+    justify-content: center;
+}
+
+#footer_top a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#footer_top a:hover {
     color: var(--accent-color);
 }
