@@ -1,143 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/vegas/dist/vegas.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <header id="profile-header">
-            <h1>My Portfolio</h1>
-            <nav id="profile-container">
-                <ul class="profile-list">
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#github">GitHub</a></li>
-                    <li><a href="#Career">Career</a></li>
-                    <li><a href="#Works">Works</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+      <header id="profile-header">
+        <h1>My Portfolio</h1>
+        <nav id="profile-container">
+          <ul class="profile-list">
+            <li><a href="#">About Me</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#Career">Career</a></li>
+            <li><a href="#Works">Works</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p id="greeting">こんにちは！こんばんは！<br>
-                    洗 幹太です。<br>
-                    宇都宮市在住の元ゲームプログラマーです。<br>
-                    Unity/C#を用いてモバイルアプリやゲームの製作、改修などを行っていました。<br>
-                    また、就労継続支援B型の方たち向けにUnity/C#の講義を行った経験もあります。
-                </p>
-                <h3>主なスキル</h3>
-                <div class="skill-grid">
-                    <div class="skill-card">Unity / C#<br>実務3年</div>
-                    <div class="skill-card">Unity / TypeScript<br>実務7か月</div>
-                    <div class="skill-card">HTML / CSSは<br>学習中</div>
-                    <div class="skill-card">JavaScript は<br>学習中</div>
-                </div>
-                <h3>趣味</h3>
-                <p>カードをクリックすると別ページに飛び推しが見れます！</p>
-                <div class="skill-grid">
-                    <a href="SubHTML/soccer.html" class="skill-card skill-card-link">サッカー観戦</a>
-                    <a href="SubHTML/games.html" class="skill-card skill-card-link">ゲーム</a>
-                    <a href="SubHTML/anime.html" class="skill-card skill-card-link">アニメ鑑賞</a>
-                    <a href="SubHTML/manga.html" class="skill-card skill-card-link">漫画</a>
-                </div>
-            </section>
+      <main>
+        <section id="about">
+          <h2>About Me</h2>
+          <p id="greeting">
+            こんにちは！こんばんは！<br />
+            洗 幹太です。<br />
+            宇都宮市在住の元ゲームプログラマーです。<br />
+            Unity/C#を用いてモバイルアプリやゲームの製作、改修などを行っていました。<br />
+            また、就労継続支援B型の方たち向けにUnity/C#の講義を行った経験もあります。
+          </p>
+          <h3>主なスキル</h3>
+          <div class="skill-grid">
+            <div class="skill-card">Unity / C#<br />実務3年</div>
+            <div class="skill-card">Unity / TypeScript<br />実務7か月</div>
+            <div class="skill-card">HTML / CSSは<br />学習中</div>
+            <div class="skill-card">JavaScript は<br />学習中</div>
+          </div>
+          <h3>趣味</h3>
+          <p>カードをクリックすると別ページに飛び推しが見れます！</p>
+          <div class="skill-grid">
+            <a href="SubHTML/soccer.html" class="skill-card skill-card-link"
+              >サッカー観戦</a
+            >
+            <a href="SubHTML/games.html" class="skill-card skill-card-link"
+              >ゲーム</a
+            >
+            <a href="SubHTML/anime.html" class="skill-card skill-card-link"
+              >アニメ鑑賞</a
+            >
+            <a href="SubHTML/manga.html" class="skill-card skill-card-link"
+              >漫画</a
+            >
+          </div>
+        </section>
 
-            <section id="github">
-                <h2>GitHub</h2>
-                <p>プロフィールページに飛びます</p>
-                <div class="skill-grid">
-                    <a href="https://github.com/Kansan00" target="_blank" class="skill-card skill-card-link">GitHub</a>
-                </div>
-            </section>
+        <section id="github">
+          <h2>GitHub</h2>
+          <p>プロフィールページに飛びます</p>
+          <div class="skill-grid">
+            <a
+              href="https://github.com/Kansan00"
+              target="_blank"
+              class="skill-card skill-card-link"
+              >GitHub</a
+            >
+          </div>
+        </section>
 
-            <section id="Career">
-                <h2>Career</h2>
-                <p id="career-comment">私の経歴です<br>
-                    実務経験 3年
-                </p>
-                <table id="career-table">
-                    <tr>
-                        <td>平成 31 / 4月</td>
-                        <td>バンタンゲームアカデミー東京校</td>
-                        <td>入学</td>
-                    </tr>
-                    <tr>
-                        <td>令和 4 / 3月</td>
-                        <td>バンタンゲームアカデミー東京校</td>
-                        <td>卒業</td>
-                    </tr>
-                    <tr>
-                        <td>令和 4 / 4月</td>
-                        <td>株式会社フィグザ</td>
-                        <td>入社</td>
-                    </tr>
-                    <tr>
-                        <td>令和 7 / 6月</td>
-                        <td>株式会社フィグザ</td>
-                        <td>退職</td>
-                    </tr>
-                </table>
-            </section>
+        <section id="Career">
+          <h2>Career</h2>
+          <p id="career-comment">
+            私の経歴です<br />
+            実務経験 3年
+          </p>
+          <table id="career-table">
+            <tr>
+              <td>平成 31 / 4月</td>
+              <td>バンタンゲームアカデミー東京校</td>
+              <td>入学</td>
+            </tr>
+            <tr>
+              <td>令和 4 / 3月</td>
+              <td>バンタンゲームアカデミー東京校</td>
+              <td>卒業</td>
+            </tr>
+            <tr>
+              <td>令和 4 / 4月</td>
+              <td>株式会社フィグザ</td>
+              <td>入社</td>
+            </tr>
+            <tr>
+              <td>令和 7 / 6月</td>
+              <td>株式会社フィグザ</td>
+              <td>退職</td>
+            </tr>
+          </table>
+        </section>
 
-            <section id="Works">
-                <h2>Works</h2>
-                <div class="works-container">
-                    <h3>スキルシート</h3>
-                    <p>私の実績です。PDFでご覧いただけます。</p>
-                    <div class="pdf-container">
-                        <a href="PDF/SkillSheet.pdf" target="_blank" class="pdf-link">スキルシートを開く</a>
-                    </div>
-                </div>
-            </section>
+        <section id="Works">
+          <h2>Works</h2>
+          <div class="works-container">
+            <h3>スキルシート</h3>
+            <p>私の実績です。PDFでご覧いただけます。</p>
+            <div class="pdf-container">
+              <a href="PDF/SkillSheet.pdf" target="_blank" class="pdf-link"
+                >スキルシートを開く</a
+              >
+            </div>
+          </div>
+        </section>
 
-            <section id="Contact">
-                <h2>Contact</h2>
-                <div class="contact-container">
-                    <h3>連絡先</h3>
-                    <p>arakan.k.0010@gmail.com</p>
-                </div>
-            </section>
-        </main>
+        <section id="Contact">
+          <h2>Contact</h2>
+          <div class="contact-container">
+            <h3>連絡先</h3>
+            <p>arakan.k.0010@gmail.com</p>
+          </div>
+        </section>
+      </main>
 
-        <footer>
-            <p id="footer_top"><a href="#">トップへ戻る</a></p>
-            <p>&copy; 2026 Kanta Arai</p>
-        </footer>
+      <footer>
+        <p id="footer_top"><a href="#">トップへ戻る</a></p>
+        <p>&copy; 2026 Kanta Arai</p>
+      </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/vegas/dist/jquery.vegas.min.js"></script>
+    <script src="https://unpkg.com/vegas/dist/vegas.iife.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
     <script>
-        $(document).ready(function () {
-            $('.profile-list').slick({
-                mobileFirst: true,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: false,
-                infinite: true,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: 'unslick'
-                    }
-                ]
-            });
+      $(function () {
+        $("body").vegas({
+          slides: [
+            { src: "/img/slide1.jpg" },
+            { src: "/img/slide2.jpg" },
+            { src: "/img/slide3.jpg" },
+            { src: "/img/slide4.jpg" },
+          ],
         });
+      });
     </script>
 
-</body>
-
+    <script>
+      $(document).ready(function () {
+        $(".profile-list").slick({
+          mobileFirst: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: "unslick",
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
 </html>
