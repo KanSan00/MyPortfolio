@@ -34,6 +34,12 @@ body {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+
+    background: rgba(0, 0, 0, 0.5); /* 黒の50%半透明 */
+    backdrop-filter: blur(10px);   /* 背景をぼかす（重要！） */
+    -webkit-backdrop-filter: blur(10px); /* Safari対策 */
+    border-radius: 20px;           /* 角を丸くして柔らかい印象に */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 薄い枠線で立体感を出す */
 }
 
 .sub-container {
