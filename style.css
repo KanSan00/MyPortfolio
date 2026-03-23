@@ -9,7 +9,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 280px;
 }
 
 /* 2. メインコンテンツに最小の高さを設定 */
@@ -32,7 +31,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 180px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
 }
