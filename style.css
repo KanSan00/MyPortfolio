@@ -1,5 +1,6 @@
 /* 全体の設定 */
 :root {
+    /* これをやっておくとvar()書けば済む */
     --primary-color: #2c3e50;
     --accent-color: #3498db;
     --bg-color: #f4f7f6;
