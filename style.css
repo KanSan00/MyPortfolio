@@ -283,6 +283,12 @@ footer {
     color: #fff;
 }
 
+.back_to_top {
+    display: flex;
+    justify-content: center;
+    margin-top: -300px;
+}
+
 /* 戻るリンク */
 .back-link {
     display: inline-block;
