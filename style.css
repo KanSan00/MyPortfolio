@@ -286,7 +286,6 @@ footer {
 .back_to_top {
     display: flex;
     justify-content: center;
-    margin-top: -300px;
 }
 
 /* 戻るリンク */
