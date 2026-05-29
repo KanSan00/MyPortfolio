@@ -1,2 +1,2 @@
 # 私のポートフォリオページです
-* <a href="https://kansan00.github.io/MyPortfolio/" target="_blank">ポートフォリオ</a>
+* <a href="https://shinbi-school.daa.jp/jwp9/arai/MyPortfolio/" target="_blank">ポートフォリオ</a>
